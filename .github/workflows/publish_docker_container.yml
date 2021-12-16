@@ -23,8 +23,7 @@ jobs:
       id: create_release
       uses: actions/create-release@v1
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         tag_name: ${{ steps.bump.outputs.new_tag }}
         release_name: ${{ steps.bump.outputs.new_tag }}
         body: |
@@ -35,8 +34,8 @@ jobs:
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: gauthampughaz/ffa_prediction # change this to your DockerHub username and repository
-        username: ${{ secrets.DOCKER_USERNAME }} # you need to add your Docker username to this GitHub repo as a secret
-        password: ${{ secrets.DOCKER_PASSWORD }} # you need to add your Docker password to this GitHub repo as a secret
+        name: gauthampughaz/ffa_prediction
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
         tags: "latest,${{ steps.bump.outputs.new_tag }}"
 
