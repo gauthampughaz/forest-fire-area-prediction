@@ -6,7 +6,7 @@
 
 In this project, we aim to predict the burned area of forest fires in the northeast region of Portugal. Forest fires are major environmental concerns with the potential of endangering human lives (Cortez and Morais, 2007). Here in BC, millions of acres of forests burn annually, damaging large swaths of forest and posing significant financial challenges. Being able to predict the size of the burned area of forest fires may significantly impact fire management and mitigation efforts.
 
-### Data Set
+### Dataset
 
 We are basing our work on a study performed by Cortez and Morais (2007), which looks at forest fire burn sizes in Montesinho natural park in northeast Portugal. This study provides us data that consists of meteorological observations (such as temperature, wind, relative humidity etc.), soil moisture indices, and spatial data. The data set contains 517 observations with no missing data, where each row represents one fire monitoring instance. The column `area` is our target value containing the burned area and the other 12 measurements and indexes will be the features.
 
